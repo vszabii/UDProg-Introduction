@@ -1,12 +1,8 @@
 #include "std_lib_facilities.h"
 #include <iostream>
-int main()
-{
-
-
 double a = 0; //kicsereltem az eredeti int et double re kitoroltem a b valtozot 
 
-double legkisebb = 0;
+double legkisebb = 99999;
 double legnagyobb = 0;
 const vector <string> measure = {"cm","m","in","ft"};
 constexpr double cm_meter_valto = 0.01;
@@ -18,6 +14,8 @@ string unit ;
 vector <double>osszes;
 double sum = 0;
 
+int main()
+{
 
 cout << "Enter a value and add a measurement unit.\n";
 cout << "m for meters, cm for centimeter, in for inch, ft for feet \n";
@@ -52,24 +50,20 @@ while (cin >> a >> unit)
 		teljes = a * ft_in_valto * in_cm_valto * cm_meter_valto;
 		cout << teljes << " m\n";
 	}else simple_error("It's a forbidden measure unit.\n");
+ 
 
-	if (a == 0)
+	if (teljes < legkisebb)
 	{
-		cout << a << unit<<" is the first, the smallest and largest as well. \n";
-		legkisebb = a;
-		legnagyobb= a;
-	} 
-
-	if (a < legkisebb );
-	{
-		cout << a <<" "<< unit <<" is the smallest so far.""\n";
-		legkisebb = a;
+		legkisebb = teljes;
+		cout << legkisebb <<" "<< unit <<" is the smallest so far.""\n";
 	}
 
-	if (a > legnagyobb)
+	if (teljes > legnagyobb)
 
-	{	cout << a <<" " << unit <<" is the largest so far.""\n";
-		legnagyobb = a;
+	{	
+		legnagyobb = teljes;
+		cout << legnagyobb <<" " << unit <<" is the largest so far.""\n";
+		
 	}
 	sum+= a;
 	osszes.push_back(a);
