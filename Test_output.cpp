@@ -42,13 +42,19 @@ int main()
 		"szabi@gmail.com","balazs@gmail.com","dani@gmail.com","peti@gmail.com","marci@gmail.com"
 	};
 	vector<string> tel_num = {"061000","062000","063000","064000","065000"};
-	
+
+	for (int i = 0; i < first_name.size(); i++)
+	{
+		cout << "| " << setw (10)<< first_name[i] << " | " << setw (10) << last_name[i] << " | " << setw (17)<< email[i] << " | " << setw (8)<< tel_num[i] << " |"  << endl;
+		
+	}
+/*
 	cout << "| " << setw (10)<< first_name[1] << " | " << setw (10)<< last_name[1] << " | " << setw (17)<< email[1] << " | " << setw (8)<< tel_num[0] << " | "  << endl;
 	cout << "| " << setw (10)<< first_name[0] << " | " << setw (10)<< last_name[0] << " | " << setw (17)<< email[0] << " | " << setw (8)<< tel_num[1] << " | "  << endl; 
 	cout << "| " << setw (10)<< first_name[3] << " | " << setw (10)<< last_name[3] << " | " << setw (17)<< email[2] << " | " << setw (8)<< tel_num[2] << " | "  << endl;
 	cout << "| " << setw (10)<< first_name[4] << " | " << setw (10)<< last_name[4] << " | " << setw (17)<< email[3] << " | " << setw (8)<< tel_num[3] << " | "  << endl;
 	cout << "| " << setw (10)<< first_name[2] << " | " << setw (10)<< last_name[2] << " | " << setw (17)<< email[4] << " | " << setw (8)<< tel_num[4] << " | "  << endl;
-
+*/
 	return 0;
 }
 
